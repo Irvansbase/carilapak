@@ -1,45 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cari Lapak Marketplace Template</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Cari Lapak</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">
-                <a href="#"><img src="icon/risk.png" alt="Logo"></a>
-            </div>
+    <header>
+        <a href="#" class="logo"><i class="ri-store-2-line"></i><span> Cari Lapak</span></a>   
+        <ul class="navbar">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="main">
+            <a href="#" class="user"><i class="ri-user-fill"></i>Masuk</a>
+            <a href="#">Daftar</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
             
-            <div class="nav-links">
-                <a href="#home">Beranda</a>
-                <a href="#games">Games</a>
-                <a href="#voucher">Voucher</a>
-                <a href="#topup">Topup</a>
-            </div>
-            
-            <div class="auth-buttons">
-                <a href="login.html" class="btn-login">Masuk</a>
-                <a href="registration.html" class="btn-register">Daftar</a>
-            </div>
-        </nav>
+        </div>
     </header>
-
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Belanja kebutuhan digitalmu disini.</h1>
-            <p>Beli listrik harga murah disini</p>
+            <h1>Temukan Item Game Terbaikmu</h1>
+            <p>Beli voucher, akun game, dan item digital lainnya dengan harga terbaik</p>
+            </div>
         </div>
     </section>
 
     <!-- Categories Section -->
     <section class="categories">
-        <h2>Kategori Populer</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-icon"><img class="img-card" src="img/pln.png" alt="pln"></div>
+                <span>PLN</span>
+            </div>
+            <div class="category-card">
+                <div class="category-icon"><img class="img-card" src="img/pdam.png" alt="pdam"></div>
+                <span>Pdam</span>
+            </div>
+            <div class="category-card">
+                <div class="category-icon pubg"></div>
+                <span>PUBG</span>
+            </div>
+            <div class="category-card">
+                <div class="category-icon"></div>
+                <span>Valorant</span>
+            </div>
+        </div>
+    </section>
+    <section class="categories">
         <div class="category-grid">
             <div class="category-card">
                 <div class="category-icon mobile-legends"></div>
@@ -59,60 +76,13 @@
             </div>
         </div>
     </section>
-
     <!-- Featured Products -->
     <section class="products">
         <h2>Item Terpopuler</h2>
         <div class="product-grid">
-            <!-- Product Item 1 -->
+            <!-- Product Items (diperpendek untuk contoh) -->
             <div class="product-card">
-                <img src="product1.jpg" alt="Product 1">
-                <div class="product-info">
-                    <h3>Lorem ipsum dolor sit amet,</h3>
-                    <div class="price">Rp 10.000</div>
-                    <button>Beli Sekarang</button>
-                </div>
-            </div>
-            <!-- Product Item 2 -->
-            <div class="product-card">
-            <img src="product1.jpg" alt="Product 1">
-            <div class="product-info">
-                <h3>Lorem ipsum dolor sit amet,</h3>
-                <div class="price">Rp 10.000</div>
-                <button>Beli Sekarang</button>
-            </div>
-        </div>
-        <!--Product Item 3-->
-        <div class="product-card">
-                <img src="product1.jpg" alt="Product 1">
-                <div class="product-info">
-                    <h3>Lorem ipsum dolor sit amet,</h3>
-                    <div class="price">Rp 10.000</div>
-                    <button>Beli Sekarang</button>
-                </div>
-            </div>
-
-
-            <div class="product-card">
-                <img src="product1.jpg" alt="Product 1">
-                <div class="product-info">
-                    <h3>Lorem ipsum dolor sit amet,</h3>
-                    <div class="price">Rp 10.000</div>
-                    <button>Beli Sekarang</button>
-                </div>
-            </div>
-            <!-- Product Item 2 -->
-            <div class="product-card">
-            <img src="product1.jpg" alt="Product 1">
-            <div class="product-info">
-                <h3>Lorem ipsum dolor sit amet,</h3>
-                <div class="price">Rp 10.000</div>
-                <button>Beli Sekarang</button>
-            </div>
-        </div>
-        <!--Product Item 3-->
-        <div class="product-card">
-                <img src="product1.jpg" alt="Product 1">
+                <img src="product1.jpg" alt="Mobile Legends Diamond">
                 <div class="product-info">
                     <h3>Lorem ipsum dolor sit amet,</h3>
                     <div class="price">Rp 10.000</div>
@@ -120,64 +90,36 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="product1.jpg" alt="Product 1">
+                <img src="product1.jpg" alt="Mobile Legends Diamond">
                 <div class="product-info">
                     <h3>Lorem ipsum dolor sit amet,</h3>
                     <div class="price">Rp 10.000</div>
                     <button>Beli Sekarang</button>
                 </div>
             </div>
-            <!-- Product Item 2 -->
             <div class="product-card">
-            <img src="product1.jpg" alt="Product 1">
-            <div class="product-info">
-                <h3>Lorem ipsum dolor sit amet,</h3>
-                <div class="price">Rp 10.000</div>
-                <button>Beli Sekarang</button>
-            </div>
-        </div>
-        <!--Product Item 3-->
-        <div class="product-card">
-                <img src="product1.jpg" alt="Product 1">
+                <img src="product1.jpg" alt="Mobile Legends Diamond">
                 <div class="product-info">
                     <h3>Lorem ipsum dolor sit amet,</h3>
                     <div class="price">Rp 10.000</div>
                     <button>Beli Sekarang</button>
                 </div>
             </div>
-
-
             <div class="product-card">
-                <img src="product1.jpg" alt="Product 1">
+                <img src="product1.jpg" alt="Mobile Legends Diamond">
                 <div class="product-info">
                     <h3>Lorem ipsum dolor sit amet,</h3>
                     <div class="price">Rp 10.000</div>
                     <button>Beli Sekarang</button>
                 </div>
             </div>
-            <!-- Product Item 2 -->
-            <div class="product-card">
-            <img src="product1.jpg" alt="Product 1">
-            <div class="product-info">
-                <h3>Lorem ipsum dolor sit amet,</h3>
-                <div class="price">Rp 10.000</div>
-                <button>Beli Sekarang</button>
-            </div>
-        </div>
-        <!--Product Item 3-->
-        <div class="product-card">
-                <img src="product1.jpg" alt="Product 1">
-                <div class="product-info">
-                    <h3>Lorem ipsum dolor sit amet,</h3>
-                    <div class="price">Rp 10.000</div>
-                    <button>Beli Sekarang</button>
-                </div>
-            </div>
-            
-            <!-- Repeat product cards as needed -->
+            <!-- Tambahkan product card lainnya di sini -->
         </div>
     </section>
-
+    <div class="search-bar">
+        <input type="text" placeholder="Cari game atau item...">
+        <button>Cari</button>
+    </div>
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -201,8 +143,10 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2024 Marketplace Template. All rights reserved</p>
+            <p>&copy; 2024 Cari Lapak. All rights reserved</p>
         </div>
     </footer>
+
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

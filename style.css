@@ -4,107 +4,187 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
-
+:root{
+  --bg-color: #222327;
+  --text-color: #fff;
+  --main-color: #29fd53;
+}
+body{
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
 /* Header Styles */
-.header {
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  position: sticky;
+header {
+  position: fixed;
+  width: 100%;
   top: 0;
+  right: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 28px 12%;
+  transition: all .50s ease;
 }
 
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+.logo{
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
+.logo i{
+  color: var(--main-color);
+  font-size: 28px;
+  margin-right: 3px;
+}
 
-.nav-links {
+.logo span{
+  color: var(--text-color);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.navbar {
   display: flex;
-  gap: 2rem;
 }
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
+.navbar a{
+  color: var(--text-color);
+  font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.3s;
+  padding: 5px 0;
+  margin: 0px 30px;
+  transition: all .50s ease;
+}
+.navbar a:hover{
+  color: var(--main-color);
+
+}
+.navbar a:active{
+  color: var(--main-color);
+
 }
 
-.nav-links a:hover {
-  color: #007bff;
-}
-
-.auth-buttons {
+.main{
   display: flex;
-  gap: 1rem;
+  align-items: center;
 }
-
-.btn-login,
-.btn-register {
-  padding: 0.5rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
+.main a{
+  margin-right: 25px;
+  margin-left: 10px;
+  color: var(--text-color);
+  font-size: 1.1rem;
   font-weight: 500;
+  transition: all .50s ease;
+}
+.user{
+  display: flex;
+  align-items: center;
+}
+.user i{
+  color: var(--main-color);
+  font-size: 28px;
+  margin-right: 7px;
+}
+.main a:hover{
+  color: var(--main-color);
+}
+#menu-icon{
+  font-size: 35px;
+  color: var(--text-color);
+  cursor: pointer;
+  display: none;
+  z-index: 10001;
+  order: 2;
 }
 
-.btn-login {
-  color: #333;
-  border: 1px solid #ddd;
+@media (max-width: 1280px){
+  header{
+    padding: 14px 2%;
+    transition: .2s;
+  }
+  .navbar a{
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
 }
 
-.btn-register {
-  background: #007bff;
-  color: white;
+@media (max-width: 1090px){
+  #menu-icon {
+    display: block !important;
+    margin-left: 20px;
+}
+
+.navbar {
+    position: fixed; /* Ganti absolute ke fixed */
+    top: 70px; /* Sesuaikan tinggi header */
+    right: -100%;
+    width: 300px;
+    height: calc(100vh - 70px);
+    background: var(--main-color);
+    flex-direction: column;
+    padding: 20px 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar.open {
+    right: 0;
+}
+
+.navbar a {
+    padding: 15px 25px;
+    margin: 8px 0;
+}
+
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #007bff 0%, #00bfff 100%);
-  padding: 4rem 2rem;
-  color: white;
-  text-align: center;
+    background: linear-gradient(135deg, #9ba4ad 0%, #00bfff 100%);
+    padding: 4rem 2rem;
+    color: white;
+    text-align: center;
 }
 
 .hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 300px;
+    align-items: center;
+    align-content: center;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .search-bar {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .search-bar input {
-  padding: 1rem;
-  width: 400px;
-  border: none;
-  border-radius: 5px;
+    padding: 1rem;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
 }
 
 .search-bar button {
-  padding: 1rem 2rem;
-  background: #ff6b6b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 1rem 2rem;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-
 /* Categories Section */
 .categories {
   padding: 4rem 2rem;
@@ -251,19 +331,44 @@
   }
 }
 /* Tambahkan !important untuk memastikan style diterapkan */
-.logo img {
-  height: 40px !important;
-  width: auto !important; /* Pertahankan aspect ratio */
-  width: 120px; /* Lebar absolut */
-  height: auto; /* Tinggi menyesuaikan */
-  
-  /* Atau */
-  max-width: 15vw; /* 15% dari lebar viewport */
-  min-width: 100px; /* Batas minimal */
-  object-fit: contain; /
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.logo {
-  display: inline-block;
-  min-width: 200px; /* Pastikan container cukup lebar */
-  padding: 10px;
+
+.category-card {
+  width: 150px; /* Atur lebar tetap */
+  height: 200px; /* Atur tinggi tetap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  margin: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.category-icon {
+  width: 100px; /* Atur lebar gambar */
+  height: 100px; /* Atur tinggi gambar */
+  background-size: cover; /* Pastikan gambar menutupi elemen tanpa merusak rasio */
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover; /* Memastikan gambar tetap proporsional */
+  margin-bottom: 10px;
+}
+
+.category-card span {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.img-card {
+  width: 100%; /* Atur lebar sesuai kontainer */
+  height: 100%; /* Atur tinggi sesuai kontainer */
+  display: block; /* Menghindari jarak antar elemen inline */
+  object-fit: cover; /* Bisa menggunakan 'contain' jika ingin gambar terlihat seluruhnya */
+  object-position: center; /* Menjaga posisi gambar tetap di tengah */
 }
