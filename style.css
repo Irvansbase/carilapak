@@ -24,9 +24,6 @@
   align-items: center;
 }
 
-.logo img {
-  height: 40px;
-}
 
 .nav-links {
   display: flex;
@@ -252,4 +249,21 @@
   .product-grid {
       grid-template-columns: 1fr;
   }
+}
+/* Tambahkan !important untuk memastikan style diterapkan */
+.logo img {
+  height: 40px !important;
+  width: auto !important; /* Pertahankan aspect ratio */
+  width: 120px; /* Lebar absolut */
+  height: auto; /* Tinggi menyesuaikan */
+  
+  /* Atau */
+  max-width: 15vw; /* 15% dari lebar viewport */
+  min-width: 100px; /* Batas minimal */
+  object-fit: contain; /
+}
+.logo {
+  display: inline-block;
+  min-width: 200px; /* Pastikan container cukup lebar */
+  padding: 10px;
 }
