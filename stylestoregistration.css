@@ -1,0 +1,71 @@
+#body {
+    background-image: url(https://images.pexels.com/photos/3695238/pexels-photo-3695238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    background-color: #E2E2E2;
+    font-family: Arial, sans-serif;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(245, 232, 232, 0.9);
+  }
+  
+  #survey-form {
+    font-family: Arial, sans-serif;
+    background-color: rgba(79, 103, 199, 0.8);
+    border-radius: 30px;
+    padding: 60px;
+    margin: 50px auto;
+    width: 60%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    font-family: 'Calibri', sans-serif;
+    color: black;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  select,
+  input[type="radio"],
+  input[type="checkbox"] {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    font-family: Arial, sans-serif;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }

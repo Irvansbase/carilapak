@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judul Halaman</title>
+    <link rel="stylesheet" href="stylestoregistration.css">
+</head>
+<body id="body">
+    <header>
+        <h1 id="title">Pendaftaran Akun</h1>
+        <p id="description">Silakan isi formulir ini dengan informasi yang diperlukan</p>
+    </header>
+    
+    <main>
+        <form method="post" id="survey-form">
+            <label id="name-label">Nama
+                <input id="name" name="name" type="text" required placeholder="Nama Lengkap">
+            </label>
+            
+            <label id="email-label">Email
+                <input id="email" name="email" type="email" placeholder="Email" required>
+            </label>
+            
+            <label id="number-label">Usia
+                <input type="number" id="number" min="1" max="50" placeholder="Usia">
+            </label>
+            
+            <label for="dropdown">Peran apa yang paling sesuai dengan pekerjaan kamu saat ini?
+                <select id="dropdown">
+                    <option value="">Harap pilih satu</option>
+                    <option value="1">Student</option>
+                    <option value="2">Full time Job</option>
+                    <option value="3">Part Time Job</option>
+                    <option value="4">Lainnya</option>
+                </select>
+            </label>
+            
+            <fieldset>
+                <legend>Warga Negara Indonesia?</legend>
+                <label><input type="radio" name="citizenship" value="wni"> Ya</label>
+                <label><input type="radio" name="citizenship" value="wna"> Tidak</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Kesiapan Mengikuti Kegiatan Offline</legend>
+                <label><input type="radio" name="participation" value="yes"> Ya</label>
+                <label><input type="radio" name="participation" value="no"> Tidak</label>
+                <label><input type="radio" name="participation" value="maybe"> Mungkin</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Program yang diminati</legend>
+                <label><input type="checkbox" name="program" value="front-end"> Front End</label>
+                <label><input type="checkbox" name="program" value="back-end"> Back End</label>
+                <label><input type="checkbox" name="program" value="data-science"> Data Science</label>
+                <label><input type="checkbox" name="program" value="ai"> Artificial Intelligence</label>
+            </fieldset>
+            
+            <label for="bio">Deskripsi Diri:
+                <textarea id="bio" rows="3" cols="30"></textarea>
+            </label>
+            
+            <label>
+                <input class="inline" type="checkbox" required> Saya menyetujui syarat dan ketentuan
+            </label>
+            
+            <button type="submit" id="submit">Kirim</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

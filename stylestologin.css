@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%);
+    background-attachment: fixed;
+}
+
+.login-box {
+    background: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transform: translateY(-5%);
+    transition: all 0.3s ease;
+}
+
+.login-box:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.login-box h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.login-box h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #038ade;
+    border-radius: 2px;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+input:not([type="submit"]), 
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+input:focus:not([type="submit"]),
+select:focus {
+    outline: none;
+    border-color: #038ade;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(3, 138, 222, 0.1);
+}
+
+input::placeholder {
+    color: #999;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #038ade;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0277b8;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+    
+    body {
+        padding: 15px;
+    }
+    
+    .login-box h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Additional Features */
+.forgot-password {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.forgot-password a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #038ade;
+}
+
+.social-login {
+    margin-top: 2rem;
+    text-align: center;
+}
