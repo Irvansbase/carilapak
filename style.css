@@ -186,38 +186,12 @@ header {
     cursor: pointer;
 }
 /* Categories Section */
-.categories {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.category-card {
-  text-align: center;
-  padding: 1rem;
-  border-radius: 10px;
-  transition: transform 0.3s;
-  cursor: pointer;
-}
 
 .category-card:hover {
   transform: translateY(-5px);
 }
 
-.category-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1rem;
-  border-radius: 50%;
-  background-size: cover;
-}
+
 
 /* Product Grid */
 .products {
@@ -424,3 +398,98 @@ header {
     gap: 2rem;
     margin-top: 2rem;
   }
+
+  header.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Enhanced product cards */
+.product-card {
+    position: relative;
+    transition: transform 0.3s ease;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Add badge for discounts */
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff4757;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+/* Improved category grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.category-card {
+    background: rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Add loading animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.product-card {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Enhanced search bar */
+.search-bar {
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.search-bar input {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    border: 2px solid #ddd;
+    font-size: 1.1rem;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+}
