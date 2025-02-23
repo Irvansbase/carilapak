@@ -148,6 +148,7 @@ header {
     padding: 4rem 2rem;
     color: white;
     text-align: center;
+    justify-content: center;
 }
 
 .hero-content {
@@ -163,34 +164,58 @@ header {
     margin-bottom: 1rem;
 }
 
-.search-bar {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+/* Simple Search */
+.search-simple {
+  margin: 15px 0;
+  display: flex;
+  gap: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
 }
 
-.search-bar input {
-    padding: 1rem;
-    width: 400px;
-    border: none;
-    border-radius: 5px;
+.search-simple input {
+  flex: 1;
+  padding: 15px 30px;
+  border: 2px solid #e0e0e0;
+  border-radius: 40px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.search-bar button {
-    padding: 1rem 2rem;
-    background: #ff6b6b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-/* Categories Section */
-
-.category-card:hover {
-  transform: translateY(-5px);
+.search-simple input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
 }
 
+.search-simple button {
+  padding: 12px 35px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+.search-simple button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+  background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+.search-simple input::placeholder {
+  color: #a0a0a0;
+  font-weight: 300;
+}
 
 
 /* Product Grid */
@@ -248,42 +273,53 @@ header {
 
 /* Footer Styles */
 .footer {
-  background: #f8f9fa;
-  margin-top: 4rem;
-  padding: 2rem;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 4rem;
-}
-
-.footer-section h4 {
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-section a {
-  text-decoration: none;
-  color: #666;
-}
-
-.footer-bottom {
+  background-color: #1c1c1c; /* Hitam doff */
+  color: white;
+  padding: 10px 0;
   text-align: center;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #ddd;
-  color: #666;
+  width: 100%;
+  position: relative;
+  bottom: max-content;
+  left: max-content;
+}
+
+.footer p {
+  margin: 0;
+  padding: auto;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+
+}
+/* Garis Pembatas */
+.footer::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(108,178,255,0.5), transparent);
+  margin: 40px auto 30px;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+      border-radius: 20px 20px 0 0;
+      padding: 40px 15px;
+  }
+  
+  .footer-section {
+      margin: 0 10px;
+  }
+  
+  .footer-section h4 {
+      font-size: 1.1rem;
+  }
+  
+  .footer-section ul li a {
+      padding: 5px 10px;
+  }
 }
 
 /* Responsive Design */
@@ -361,7 +397,7 @@ header {
     margin: 1rem;
     padding: 2rem 2rem;
   }
-}
+
 
 
 .right {
@@ -401,7 +437,6 @@ header {
 
   header.scrolled {
     background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -493,3 +528,5 @@ header {
     padding: 0.8rem 2rem;
     border-radius: 25px;
 }
+
+
