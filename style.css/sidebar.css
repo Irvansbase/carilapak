@@ -1,0 +1,148 @@
+/* Sidebar Enhanced Version */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: #2e2c2c;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Enhanced Sidebar */
+.sidebar {
+    flex: 0 0 250px;
+    background: linear-gradient(145deg, #2e2c2c, #404040);
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+    min-height: 100vh;
+    transform: translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar:hover {
+    box-shadow: 5px 0 25px rgba(0,0,0,0.2);
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(10, 9, 9, 0.3);
+}
+
+.sidebar h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #00ff88;
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover h2::after {
+    width: 100px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    color: #ffffff;
+    padding: 15px;
+    margin: 8px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255,255,255,0.05);
+}
+
+.sidebar li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.sidebar li:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateX(10px);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.sidebar li:hover::before {
+    left: 100%;
+}
+
+/* Enhanced Content Area */
+.content {
+    flex: 1;
+    background: #2e2c2c;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.content:hover {
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Custom Scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #00ff88;
+    border-radius: 5px;
+}
+
+/* Responsive Design with Animation */
+@media (max-width: 768px) {
+    .sidebar {
+        flex: 0 0 100%;
+        min-height: auto;
+        box-shadow: none;
+        transform: translateY(0);
+    }
+    
+    .content {
+        flex: 0 0 100%;
+        padding: 20px;
+    }
+    
+    .sidebar li:hover {
+        transform: translateX(5px);
+    }
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sidebar h2,
+.sidebar li,
+.content {
+    animation: fadeIn 0.6s ease forwards;
+}

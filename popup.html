@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Purchase Popup</title>
+    <style>
+        /* Gaya Popup */
+        .popup {
+            display: none; /* Awalnya tidak terlihat */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Latar belakang gelap */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .purchase-btn {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .purchase-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <h2>Judul Produk</h2>
+            <img src="product-image.jpg" alt="Product Image" class="product-image">
+            <p class="description">Deskripsi singkat produk yang menarik perhatian pengunjung.</p>
+
+            <!-- Pilihan Varian -->
+            <label for="varian">Pilih Varian:</label>
+            <select id="varian">
+                <option value="varian1">Varian 1</option>
+                <option value="varian2">Varian 2</option>
+                <option value="varian3">Varian 3</option>
+            </select>
+
+            <!-- Kuantitas Produk -->
+            <label for="quantity">Kuantitas:</label>
+            <input type="number" id="quantity" value="1" min="1" max="10">
+
+            <!-- Tombol Beli -->
+            <button id="purchaseBtn" class="purchase-btn">Tambahkan ke Keranjang</button>
+        </div>
+    </div>
+
+    <script>
+        // Mendapatkan elemen popup
+        var popup = document.getElementById("popup");
+
+        // Tombol untuk menutup popup
+        var closePopupBtn = document.getElementById("closePopup");
+
+        // Menutup popup ketika tombol "X" diklik
+        closePopupBtn.onclick = function() {
+            popup.style.display = "none";
+            window.parent.postMessage("closePopup", "*"); // Kirim pesan ke parent (index.html)
+        }
+
+        // Menutup popup jika klik di luar konten popup
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+                window.parent.postMessage("closePopup", "*"); // Kirim pesan ke parent (index.html)
+            }
+        }
+
+        // Aksi ketika tombol "Tambahkan ke Keranjang" diklik
+        var purchaseBtn = document.getElementById("purchaseBtn");
+        purchaseBtn.onclick = function() {
+            var quantity = document.getElementById("quantity").value;
+            var varian = document.getElementById("varian").value;
+            alert("Anda telah memilih " + quantity + " buah dengan varian " + varian);
+        }
+    </script>
+</body>
+</html>

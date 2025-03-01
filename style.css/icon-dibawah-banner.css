@@ -1,0 +1,41 @@
+.icon-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 kolom per baris */
+    gap: 20px; /* Jarak antar item, boleh diatur */
+    max-width: 1200px; /* Supaya tidak terlalu melebar, bisa diubah sesuai kebutuhan */
+    margin: 0 auto; /* Center secara horizontal */
+    padding: 20px;
+    background-color: #2c2c2c;
+  }
+  
+  /* Gaya tiap item */
+  .icon-item {
+    text-align: center;
+  }
+  
+  .icon-item img {
+    width: 60px; /* Lebar ikon, silakan diatur */
+    height: 60px; /* Tinggi ikon, silakan diatur */
+    object-fit: cover; /* Biar gambar terjaga proporsinya */
+    margin-bottom: 8px; /* Jarak antara ikon dan judul */
+  }
+  
+  .icon-item p {
+    font-size: 14px; /* Ukuran teks judul */
+    margin: 0;       /* Hilangkan margin default */
+  }
+
+  .p-icon, .p-icon1{
+    font-size: 14px; /* Ukuran teks judul */
+    margin: 15px 15px 15px 15px;       /* Hilangkan margin default */
+    font-size: 30px;
+    font-display: swap;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    align-items: center;
+    align-text: center;
+
+      
+  }
