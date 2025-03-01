@@ -1,3 +1,18 @@
+/* Untuk layar lebar (desktop) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Untuk layar kecil (ponsel) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
 /* Reset CSS */
 * {
   margin: 0;

@@ -1,3 +1,32 @@
+body {
+  font-size: 16px; /* Ukuran default */
+}
+
+h1 {
+  font-size: 2.5rem; /* 2.5 kali ukuran font default */
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem; /* Ukuran lebih kecil untuk layar kecil */
+  }
+}
+
+/* Untuk layar lebar (desktop) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Untuk layar kecil (ponsel) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
 .icon-list {
     display: grid;
     grid-template-columns: repeat(10, 1fr); /* 10 kolom per baris */
@@ -32,7 +61,7 @@
     font-display: swap;
     font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: auto;
     font-style: normal;
     align-items: center;
     align-text: center;
