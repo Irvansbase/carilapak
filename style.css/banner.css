@@ -1,0 +1,49 @@
+
+.banner-container {
+  width: 50%;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px auto;
+}
+
+.banner-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 800%; /* 8 gambar x 100% */
+}
+
+.banner-item {
+  flex: 0 0 12.5%; /* 100% / 8 gambar */
+  height: 300px;
+  display: flex; /* Baru: flex container */
+  justify-content: center; /* Baru: pusatkan horizontal */
+  align-items: center; /* Baru: pusatkan vertikal */
+  overflow: hidden; /* Baru: pastikan gambar tidak overflow */
+}
+
+.banner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; /* Baru: fokus ke tengah gambar */
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-container {
+    width: 80%;
+  }
+  .banner-item {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    width: 95%;
+  }
+}

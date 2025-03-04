@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelian Diamond Mobile Legends</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 20px;
+        }
+
+        /* Product Header */
+        .product-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .product-image {
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        /* Purchase Form */
+        .purchase-form {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .game-id-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .server-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .server-option {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .server-option.active {
+            border-color: #007bff;
+            background: #e3f2fd;
+        }
+
+        /* Payment Methods */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 2rem;
+        }
+
+        .payment-method {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .payment-method.active {
+            border-color: #28a745;
+            background: #e8f5e9;
+        }
+
+        .payment-logo {
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* Voucher Selection */
+        .voucher-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .voucher-option {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .voucher-option.active {
+            border-color: #ff5722;
+            background: #fff3e0;
+        }
+
+        .voucher-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .checkout-button {
+            width: 100%;
+            padding: 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .checkout-button:hover {
+            background: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .product-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .product-image {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-header">
+            <img src="https://cdn.uniplay.id/webp/portrait/mobile-legends.webp" alt="Mobile Legends" class="product-image">
+            <div>
+                <h1>Mobile Legends Diamond</h1>
+                <p>Isi diamond Mobile Legends dengan mudah dan cepat</p>
+            </div>
+        </div>
+
+        <div class="purchase-form">
+            <div class="form-group">
+                <label for="game-id">Masukkan ID Game:</label>
+                <input type="number" id="game-id" class="game-id-input" placeholder="Contoh: 123456789">
+            </div>
+
+            <div class="form-group">
+                <label>Pilih Server:</label>
+                <div class="server-selection">
+                    <div class="server-option active">Indonesia</div>
+                    <div class="server-option">Malaysia</div>
+                    <div class="server-option">Singapura</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Pilih Voucher Diamond:</label>
+                <div class="voucher-grid">
+                    <div class="voucher-option">
+                        <div class="voucher-price">86 Diamond - Rp 20.000</div>
+                    </div>
+                    <div class="voucher-option">
+                        <div class="voucher-price">172 Diamond - Rp 40.000</div>
+                    </div>
+                    <div class="voucher-option active">
+                        <div class="voucher-price">257 Diamond - Rp 60.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Metode Pembayaran:</label>
+                <div class="payment-methods">
+                    <div class="payment-method active">
+                        <img src="gopay-logo.png" alt="Gopay" class="payment-logo">
+                        <div>Gopay</div>
+                    </div>
+                    <div class="payment-method">
+                        <img src="ovo-logo.png" alt="OVO" class="payment-logo">
+                        <div>OVO</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="checkout-button">Beli Sekarang</button>
+        </div>
+    </div>
+
+    <script>
+        // Server Selection
+        document.querySelectorAll('.server-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.server-option').forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Voucher Selection
+        document.querySelectorAll('.voucher-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.voucher-option').forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Payment Method Selection
+        document.querySelectorAll('.payment-method').forEach(method => {
+            method.addEventListener('click', function() {
+                document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Checkout Validation
+        document.querySelector('.checkout-button').addEventListener('click', function() {
+            const gameId = document.getElementById('game-id').value;
+            const server = document.querySelector('.server-option.active').innerText;
+            const voucher = document.querySelector('.voucher-option.active').innerText;
+            const paymentMethod = document.querySelector('.payment-method.active').innerText;
+
+            if (!gameId) {
+                alert('Masukkan ID Game terlebih dahulu!');
+                return;
+            }
+
+            // Proses pembayaran...
+            alert(`Pembelian berhasil!\nID Game: ${gameId}\nServer: ${server}\n${voucher}\nMetode: ${paymentMethod}`);
+        });
+    </script>
+</body>
+</html>

@@ -27,7 +27,7 @@
   --bg-color: #222327;
   --text-color: #fff;
   --main-color: #29fd53;
-}
+  --navbar-height: 70px;}
 body{
   min-height: 100vh;
   background: #2e2c2c;
@@ -43,8 +43,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(102, 32, 32, 0.9);
-  padding: 5px 12%;
+  background: rgb(55, 58, 53);
+  box-shadow: 0 2px 2px rgb(87, 82, 82);
+  padding: 10px 12%;
   transition: all .50s ease;
 }
 
@@ -75,6 +76,7 @@ header {
   padding: 5px 0;
   margin: 0px 30px;
   transition: all .50s ease;
+  align-items: center;
 }
 .navbar a:hover{
   color: var(--main-color);
@@ -165,13 +167,15 @@ header {
     color: rgb(255, 255, 255);
     text-align: center;
     justify-content: center;
+    margin: 0 ;
+    font-family: system-ui, sans-serif;
 }
 
 .hero-content {
   display: block;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
-    height: 200px;
+    height: 100px;
     align-items: center;
     align-content: center;
 }
@@ -189,7 +193,7 @@ header {
 /* Footer Styles */
 footer {
   background: #222;
-  color: #222
+  color: #ffffff;
   padding: 40px 0;
   width: 100%;
   display: block;
@@ -313,41 +317,10 @@ footer {
  }
 
 /* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
-.game-img {
-  max-width: 600px; /* Gambar tidak akan lebih besar dari kontainer */
-  margin: 0; /* Hapus margin untuk menghindari spasi */
-  height: auto; /* Ketinggian menyesuaikan proporsi lebar */
-  display: block; /* Mengubah menjadi block untuk menghilangkan spasi */
-  border-radius: 10px;
-  object-fit: cover; /* Mengisi kontainer gambar */
+.horizontal-line {
+    width: 95%; /* Lebar garis menjadi 50% dari container */
+    height: 2px; /* Tinggi atau ketebalan garis */
+    background-color: rgb(180, 161, 161); /* Warna garis putih */
+    margin: 20px auto; /* Otomatis terpusat secara horizontal */
+  
 }
-
-.game-img2 {
-  max-width: 300px; /* Gambar tidak akan lebih besar dari kontainer */
-  margin: 0; /* Hapus margin untuk menghindari spasi */
-  height: auto; /* Tinggi otomatis sesuai proporsi lebar */
-  display: block; /* Mengubah menjadi block untuk menghilangkan spasi */
-  border-radius: 10px;
-  object-fit: cover; /* Mengisi kontainer gambar */
-}
-
-.featured-games {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Membuat dua kolom */
-  grid-template-rows: auto;
-  gap: 0; /* Hapus gap untuk menghindari jarak antar gambar */
-  max-width: 700px;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto; /* Pusatkan grid */
-}
-
-
-.icon-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin:0 5px 15px 0;
-}
-
